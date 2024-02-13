@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Pizza Order Form</h1>
+        <p>Welcome to our pizza ordering service!</p>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Pizza Order Form -->
+        <form action="process_order.php" method="post">
+            <!-- Number of Pizzas -->
+            <label for="pizzaQuantity">Number of Pizzas:</label>
+            <input type="number" id="pizzaQuantity" name="pizzaQuantity" min="1" required>
+
+            <!-- Size -->
+            <fieldset>
+                <legend>Pizza Size</legend>
+                <label><input type="radio" name="pizzaSize" value="small" checked> Small</label>
+                <label><input type="radio" name="pizzaSize" value="medium"> Medium</label>
+                <label><input type="radio" name="pizzaSize" value="large"> Large</label>
+            </fieldset>
+
+            <!-- Shape -->
+            <fieldset>
+                <legend>Pizza Shape</legend>
+                <label><input type="radio" name="pizzaShape" value="round" checked> Round</label>
+                <label><input type="radio" name="pizzaShape" value="square"> Square</label>
+            </fieldset>
+
+            <!-- Toppings -->
+            <label for="toppings">Toppings:</label>
+            <select id="topppings" name="Toppings">
+                <option value="Pepperoni">Pepperoni</option>
+                <option value="Sausage">Sausage</option>
+                <option value="Bacon">Bacon</option>
+                <option value="Chicken">Chicken</option>
+                <option value="Beef">Beef</option>
+                <option value="Ham">Ham</option>
+            </select>
+
+            <!-- Crust Type -->
+            <label for="crustType">Crust Type:</label>
+            <select id="crustType" name="crustType">
+                <option value="deepDish">Deep Dish</option>
+                <option value="thinCrust">Thin Crust</option>
+                <option value="regular">Regular</option>
+            </select>
+
+            <!-- Delivery Method -->
+            <label>Delivery Method:</label>
+            <label><input type="radio" name="deliveryMethod" value="takeout" checked> Takeout</label>
+            <label><input type="radio" name="deliveryMethod" value="delivery"> Delivery</label>
+            <label><input type="radio" name="deliveryMethod" value="eatIn"> Eat-In</label>
+        </br>
+
+            <!-- Additional Inputs (phone, email, date, etc.) -->
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" placeholder="1234567890" required>
+        </br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </br>
+
+            <label for="deliveryDate">Delivery Date:</label>
+            <input type="date" id="deliveryDate" name="deliveryDate" required>
+        </br>
+
+            <!-- Image Illustration -->
+            <p>
+                <img src="C:\Users\akhil\Downloads\R (1).jpeg" height="250" width="250" alt="Delicious Pizza">
+            </p>
+
+            <!-- Comments -->
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+
+            <!-- Submit and Reset Buttons -->
+            <input type="submit" value="Place Order">
+            <input type="reset" value="Reset Form">
+        </form>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Contact us at: info@pizzadelivery.com</p>
+    </footer>
+
+</body>
+</html>
